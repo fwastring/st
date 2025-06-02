@@ -6,7 +6,7 @@ nix_folder="$HOME/nix"
 working_dir="$(pwd)"
 git_revision="$(git log | head -1 | awk '{print $2;}')"
 replace_pattern="      rev = \"${git_revision}\";"
-sed -i "6s/.*/${replace_pattern}/" "${nix_folder}/shared/st.nix"
+sed -i "7s/.*/${replace_pattern}/" "${nix_folder}/shared/st.nix"
 sudo nixos-rebuild switch --flake "/home/fw/nix#laptop"
 cd ${working_dir}
 
