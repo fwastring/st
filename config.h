@@ -42,7 +42,7 @@ unsigned int defaultbg = 257;
 unsigned int defaultcs = 258;
 static unsigned int defaultrcs = 258;
 static char *font = "ComicShannsMono Nerd Font:pixelsize=25:antialias=true:autohint=true";
-static int borderpx = 2;
+static int borderpx = 10;
 
 /*
  * What program is execed by st depends of these precedence rules:
