@@ -41,7 +41,7 @@ unsigned int defaultfg = 256;
 unsigned int defaultbg = 257;
 unsigned int defaultcs = 258;
 static unsigned int defaultrcs = 258;
-static char *font = "ComicShannsMono Nerd Font Bold:pixelsize=25:antialias=true:autohint=true";
+static char *font = "ComicShannsMono Bold Nerd Font:pixelsize=25:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
