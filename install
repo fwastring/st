@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 nix_folder="$HOME/nix"
+host_name=$(hostname)
 
 linenumber=$(sed -n '/st.overrideAttrs/=' "${nix_folder}/config/base.nix")
 ((linenumber+=3))
@@ -13,6 +14,6 @@ working_dir="$(pwd)"
 git_revision="$(git log | head -1 | awk '{print $2;}')"
 replace_pattern="      rev = \"${git_revision}\";"
 sed -i "${linenumber}s/.*/${replace_pattern}/" "${nix_folder}/config/base.nix"
-sudo nixos-rebuild switch --flake "${nix_folder}#laptop"
+sudo nixos-rebuild switch --flake "${nix_folder}#${hostname}"
 cd "${working_dir}" || exit 0
 
